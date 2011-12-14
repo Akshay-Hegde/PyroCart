@@ -150,7 +150,6 @@ class Admin extends Admin_Controller
 	}
 	function product_image_manage($product_id,$image_id='')
 		{
-			$this->form_validation->_field_data=array();
 			$this->validation_rules = array(
 				array(
 					'field' => 'name',
