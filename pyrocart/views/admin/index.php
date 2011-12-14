@@ -1,6 +1,8 @@
+<section class="title">
+    <h4><?php echo lang('pyrocart.list_title'); ?></h4>
+</section>
 <?php if (!empty($products)): ?>
-    <h3><?php echo lang('pyrocart.list_title'); ?></h3>
-    
+<section class="item">
     <table border="0" class="table-list">
         <thead>
             <tr>
@@ -41,12 +43,14 @@
             <?php endforeach; ?>
             </tbody>
 	</table>
-
+</section>
 <?php else: ?>
+<section class="item">
     <div class="blank-slate">
-        <img src="<?php echo base_url().'addons/modules/pyrocart/img/products.png' ?>" />
+        <img src="<?php echo base_url().'addons/shared_addons/modules/pyrocart/img/products.png' ?>" />
         <h2><?php echo lang('pyrocart.no_products_error');?></h2>
     </div>
+</section>
 <?php endif;?>
 
 <p><?php $this->load->view('admin/partials/pagination'); ?></p>

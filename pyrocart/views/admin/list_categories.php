@@ -1,8 +1,9 @@
-<?php if (!empty($categories)):
+<section class="title">
+<h4><?php echo lang('pyrocart.list_categories'); ?></h4>
+</section>
 
- ?>
-	<h3><?php echo lang('advertisements.criteria_list_title'); ?></h3>
-
+<?php if (!empty($categories)): ?>
+<section class="item">
 	<ul>
 	<?php foreach ($product_categories as $cat): ?>
 		<li><?php echo anchor('/admin/pyrocart/edit_product_category/' . $cat->id,$cat->name); ?>&nbsp;|<a href="<?php echo base_url()?>admin/pyrocart/add_product_category/<?=$cat->id?>">Add child</a>
@@ -63,12 +64,15 @@
 			<?php endforeach; ?>
 		</tbody>
 	</table> -->
+</section>
 <?php else: ?>
+<section class="item">
 	<div class="blank-slate">
-		<img src="<?php echo base_url().'addons/modules/advertisements/img/news.png' ?>" />
+		<img src="<?php echo base_url().'addons/shared_addons/modules/pyrocart/img/products.png' ?>" />
 
-		<h2><?php echo lang('advertisements.no_advertisements_error');?></h2>
+		<h2><?php echo lang('pyrocart.no_categories_error');?></h2>
 	</div>
+</section>
 <?php endif;?>
 
 <p><?php $this->load->view('admin/partials/pagination'); ?></p>

@@ -366,7 +366,7 @@ class Admin extends Admin_Controller
 	function add_product_category($id = FALSE)
 	{
 		$this->load->library('form_validation');
-		$this->form_validation->_field_data=array();
+
 		$fields = array(
 			array(
 				'field' => 'name',
@@ -457,22 +457,4 @@ class Admin extends Admin_Controller
 
 		$this->template->build('admin/edit_product_category', $this->data);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-?>

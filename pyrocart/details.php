@@ -15,7 +15,14 @@ class Module_Pyrocart extends Module {
                     ),
                     'frontend' => TRUE,
                     'backend' => TRUE,
-                    'menu' => 'PyroCart'
+                    'menu' => 'PyroCart',
+                    'shortcuts' => array(
+					array(
+				 	   'name' => 'pyrocart.add_title',
+					   'uri' => 'admin/pyrocart/create',
+					   'class' => 'add'
+					),
+				),
             );
     }
 

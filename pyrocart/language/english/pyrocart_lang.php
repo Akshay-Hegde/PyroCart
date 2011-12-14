@@ -34,6 +34,7 @@ $lang['product_create_success'] 			= 'The product "%s" was created successfully.
 $lang['letter_add_error'] 				= 'An error occured.';
 $lang['letter_sent_success'] 				= 'The pyrocart was sent.';
 $lang['letter_sent_error'] 				= 'An error occured.';
+$lang['pyrocart.no_categories_error']			= 'No categories';
 
 
 $lang['pyrocart.criteriaedit']                          = 'Edit';
