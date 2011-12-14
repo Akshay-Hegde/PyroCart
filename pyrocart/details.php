@@ -16,6 +16,18 @@ class Module_Pyrocart extends Module {
                     'frontend' => TRUE,
                     'backend' => TRUE,
                     'menu' => 'PyroCart',
+                    'shortcuts' => array(
+								array(
+							 	   'name' => 'pyrocart.add_title',
+								   'uri' => 'admin/pyrocart/create',
+								   'class' => 'add'
+								),
+								array(
+								    'name' => 'pyrocart.add_category',
+								    'uri' => 'admin/pyrocart/add_product_category',
+								    'class' => 'add'
+								),
+							),
                     'sections' => array(
 					    'products' => array(
 						    'name' => 'products.title',
