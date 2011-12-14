@@ -16,13 +16,30 @@ class Module_Pyrocart extends Module {
                     'frontend' => TRUE,
                     'backend' => TRUE,
                     'menu' => 'PyroCart',
-                    'shortcuts' => array(
-					array(
-				 	   'name' => 'pyrocart.add_title',
-					   'uri' => 'admin/pyrocart/create',
-					   'class' => 'add'
+                    'sections' => array(
+					    'products' => array(
+						    'name' => 'products.title',
+						    'uri' => 'admin/pyrocart',
+						    'shortcuts' => array(
+								array(
+							 	   'name' => 'pyrocart.add_title',
+								   'uri' => 'admin/pyrocart/create',
+								   'class' => 'add'
+								),
+							),
+						),
+						'categories' => array(
+						    'name' => 'pyrocart.categories_title',
+						    'uri' => 'admin/pyrocart/list_categories',
+						    'shortcuts' => array(
+								array(
+								    'name' => 'pyrocart.add_category',
+								    'uri' => 'admin/pyrocart/add_product_category',
+								    'class' => 'add'
+								),
+						    ),
+					    ),
 					),
-				),
             );
     }
 

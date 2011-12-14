@@ -92,7 +92,6 @@ class Admin extends Admin_Controller
 			)
 
 		);
-		$this->form_validation->set_rules($this->validation_rules);
 
 		$this->template->set_partial('shortcuts', 'admin/partials/shortcuts');
 	}
@@ -224,13 +223,11 @@ class Admin extends Admin_Controller
 
 		}
 
-
-
-
-
-// Admin: Edit a product
+	// Admin: Edit a product
 	function edit($id = 0)
         {
+        	$this->form_validation->set_rules($this->validation_rules);
+			
             if ($this->form_validation->run())
             {
                 if ($this->pyrocart_m->edit_product($id,$_POST))
@@ -270,7 +267,8 @@ class Admin extends Admin_Controller
 	// Admin: Create a new Product
 	function create()
 	{
-
+		$this->form_validation->set_rules($this->validation_rules);
+		
             if ($this->form_validation->run())
             {
                 if ($this->pyrocart_m->new_product($_POST))
@@ -346,12 +344,6 @@ class Admin extends Admin_Controller
 		$this->session->set_flashdata('success', lang('Successfully made the advertisement(s) sponsored'));
 		redirect('admin/pyrocart');
 	}
-
-
-
-
-
-
 
 	function delete($product_id='')
 	{

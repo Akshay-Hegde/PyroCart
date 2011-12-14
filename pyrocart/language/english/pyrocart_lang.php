@@ -2,10 +2,12 @@
 
 //Shortcut Titles
 $lang['pyrocart.add_title']				= 'Create Product';
-$lang['pyrocart.list_title'] 				= 'List Product';
-$lang['pyrocart.add_category']                          = 'Add Category';
-$lang['pyrocart.list_categories']                       = 'List Categories';
-$lang['pyrocart.list_orders']                           = 'List Orders';
+$lang['products.title']					= 'Products';
+$lang['pyrocart.categories_title']		= 'Categories';
+$lang['pyrocart.list_title'] 			= 'List Product';
+$lang['pyrocart.add_category']			= 'Add Category';
+$lang['pyrocart.list_categories']		= 'List Categories';
+$lang['pyrocart.list_orders']			= 'List Orders';
 
 //Labels
 $lang['pyrocart.title']                                 = 'Title';
