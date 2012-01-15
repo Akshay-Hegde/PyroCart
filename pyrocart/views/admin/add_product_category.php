@@ -1,5 +1,7 @@
-<h3>Add category</h3>
-
+<section class="title">
+<h4>Add category</h4>
+</section>
+<section class="item">
 <?php echo form_open_multipart($this->uri->uri_string(), 'class="crud"'); ?>
 
 	<ol>
@@ -17,3 +19,4 @@
 		<?php $this->load->view('admin/partials/buttons', array('buttons' => array('save', 'cancel') )); ?>
 	</div>
 <?php echo form_close(); ?>
+</section>

@@ -1,10 +1,10 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/pyrocms/assets/css/admin/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/pyrocms/assets/css/admin/text.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/pyrocms/assets/css/admin/forms.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/pyrocms/assets/css/admin/buttons.css">
+<!--<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/cms/assets/css/admin/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/cms/assets/css/admin/text.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/cms/assets/css/admin/forms.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>system/cms/assets/css/admin/buttons.css">-->
 
 <style>
 body{background:#fff;}

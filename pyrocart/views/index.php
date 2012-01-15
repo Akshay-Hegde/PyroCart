@@ -66,15 +66,15 @@
         if($show_in_list){
         ?>
         <div class="probox">            
-            <a href="{pyro:url:base}pyrocart/details/<?php echo $product->id?>">
+            <a href="{{ url:base }}pyrocart/details/<?php echo $product->id?>">
             <div class="product" >
                 <?php $image =  $this->images_m->get_product_images($product->id,1);?>
                 <?php if(count($image)>0):?>
                     <div style="width:140px;height:140px;overflow:hidden;">
-                        <img width="130px" src="{pyro:url:base}uploads/pyrocart/thumbs/<?php echo $image[0]->product_image_thumb?>" alt="" />
+                        <img width="130px" src="{{ url:base }}uploads/pyrocart/thumbs/<?php echo $image[0]->product_image_thumb?>" alt="" />
                     </div>
                 <?php else:?>
-                    <img src="{pyro:url:base}addons/default/modules/pyrocart/img/product.jpg" alt="" />
+                    <img src="{{ url:base }}addons/shared_addons/modules/pyrocart/img/product.png" alt="" />
                 <?php endif;?>
                 
                 <?php if($product->stock<=0):?>
@@ -89,7 +89,7 @@
                 <div class="shadowup">
                     <dl>
                         <dt class="p1"><?php echo $product->title?></dt>
-                        <dt class="p3"><a href="{pyro:url:base}pyrocart/details/<?php echo $product->id?>">More Details</a></dt>
+                        <dt class="p3"><a href="{{ url:base }}pyrocart/details/<?php echo $product->id?>">More Details</a></dt>
                         <?php if($time_difference):?>
                             <dt class="p2">Time Left:<?php echo $time_difference;?></dt>
                         <?php endif;?>
@@ -104,10 +104,10 @@
                     <input type="hidden" name="product_id" value="<?php echo $product->id; ?>"/>
                     
                     <?php if($product->external_url): ?>
-                        <a href="<?php echo $product->external_url; ?>" target="_blank"><img src="{pyro:url:base}addons/default/modules/pyrocart/img/external.jpg" /></a>
+                        <a href="<?php echo $product->external_url; ?>" target="_blank"><img src="{{ url:base }}addons/default/modules/pyrocart/img/external.jpg" /></a>
                     <?php else: ?>
                         <?php if($product->stock > 0): ?>
-                                <input  name="addtocart" type="image" src="{pyro:url:base}addons/default/modules/pyrocart/img/cart.jpg" />
+                                <input  name="addtocart" type="image" src="{{ url:base }}addons/shared_addons/modules/pyrocart/img/cart.jpg" />
                         <?php else: ?>
                                 Sold Out
                         <?php endif; ?>

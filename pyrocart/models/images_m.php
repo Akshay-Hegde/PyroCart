@@ -106,10 +106,10 @@ class Images_m extends CI_Model
 			if ( $this->upload->do_upload($imageNo) )
 			{
 				if($overwrite&&$imageNo=='product_image'){
-					@unlink(FCPATH.'/uploads/pyrocart/full/'.$image->product_image);
+					@unlink(UPLOAD_PATH.'pyrocart/full/'.$image->product_image);
 				}
 				if($overwrite&&$imageNo=='product_image_thumb'){
-					@unlink(FCPATH.'/uploads/pyrocart/thumbs/'.$image->product_image_thumb);
+					@unlink(UPLOAD_PATH.'pyrocart/thumbs/'.$image->product_image_thumb);
 				}
 
 				$uploaded_data 	= $this->upload->data();

@@ -2,10 +2,14 @@
 
 //Shortcut Titles
 $lang['pyrocart.add_title']				= 'Create Product';
-$lang['pyrocart.list_title'] 				= 'List Product';
-$lang['pyrocart.add_category']                          = 'Add Category';
-$lang['pyrocart.list_categories']                       = 'List Categories';
-$lang['pyrocart.list_orders']                           = 'List Orders';
+$lang['products.title']					= 'Products';
+$lang['pyrocart.categories_title']		= 'Categories';
+$lang['pyrocart.category']				= 'Category';
+$lang['pyrocart.list_title'] 			= 'List Products';
+$lang['pyrocart.add_category']			= 'Add Category';
+$lang['pyrocart.list_categories']		= 'List Categories';
+$lang['pyrocart.list_orders']			= 'List Orders';
+$lang['products.edit_title']			= 'Edit Product';
 
 //Labels
 $lang['pyrocart.title']                                 = 'Title';
@@ -34,6 +38,7 @@ $lang['product_create_success'] 			= 'The product "%s" was created successfully.
 $lang['letter_add_error'] 				= 'An error occured.';
 $lang['letter_sent_success'] 				= 'The pyrocart was sent.';
 $lang['letter_sent_error'] 				= 'An error occured.';
+$lang['pyrocart.no_categories_error']			= 'No categories';
 
 
 $lang['pyrocart.criteriaedit']                          = 'Edit';

@@ -15,7 +15,43 @@ class Module_Pyrocart extends Module {
                     ),
                     'frontend' => TRUE,
                     'backend' => TRUE,
-                    'menu' => 'PyroCart'
+                    'menu' => 'PyroCart',
+                    'shortcuts' => array(
+								array(
+							 	   'name' => 'pyrocart.add_title',
+								   'uri' => 'admin/pyrocart/create',
+								   'class' => 'add'
+								),
+								array(
+								    'name' => 'pyrocart.add_category',
+								    'uri' => 'admin/pyrocart/add_product_category',
+								    'class' => 'add'
+								),
+							),
+                    'sections' => array(
+					    'products' => array(
+						    'name' => 'products.title',
+						    'uri' => 'admin/pyrocart',
+						    'shortcuts' => array(
+								array(
+							 	   'name' => 'pyrocart.add_title',
+								   'uri' => 'admin/pyrocart/create',
+								   'class' => 'add'
+								),
+							),
+						),
+						'categories' => array(
+						    'name' => 'pyrocart.categories_title',
+						    'uri' => 'admin/pyrocart/list_categories',
+						    'shortcuts' => array(
+								array(
+								    'name' => 'pyrocart.add_category',
+								    'uri' => 'admin/pyrocart/add_product_category',
+								    'class' => 'add'
+								),
+						    ),
+					    ),
+					),
             );
     }
 
@@ -238,12 +274,12 @@ class Module_Pyrocart extends Module {
             $this->db->insert('settings', $settings_pyrocart_timer) &&
             $this->db->insert('settings', $settings_pyrocart_weight) &&
 
-            (is_dir('uploads/pyrocart') OR mkdir('uploads/pyrocart',0777,TRUE)) )
+            (is_dir(UPLOAD_PATH.'pyrocart') OR mkdir(UPLOAD_PATH.'pyrocart',0777,TRUE)) )
         {
-            if(is_dir('uploads/pyrocart/full') OR mkdir('uploads/pyrocart/full',0777,TRUE)){
+            if(is_dir(UPLOAD_PATH.'/pyrocart/full') OR mkdir(UPLOAD_PATH.'pyrocart/full',0777,TRUE)){
                     // created full
             }
-            if(is_dir('uploads/pyrocart/thumbs') OR mkdir('uploads/pyrocart/thumbs',0777,TRUE)){
+            if(is_dir(UPLOAD_PATH.'pyrocart/thumbs') OR mkdir(UPLOAD_PATH.'pyrocart/thumbs',0777,TRUE)){
                     // created thumbs
             }
             return TRUE;

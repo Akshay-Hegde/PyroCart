@@ -66,7 +66,7 @@ div#loader {
         }
 div#loader img{width:204px;height:204px;}
 div#loader.loading {
-    background: url('<?php echo base_url()?>addons/modules/pyrocart/img/loading.gif') no-repeat center center;
+    background: url('<?php echo base_url(); ?>addons/shared_addons/modules/pyrocart/img/loading.gif') no-repeat center center;
 }
 </style>
 
@@ -147,7 +147,7 @@ $(document).ready(function(){
             <div class="col1 leftStyle">
                 <div id="loader">
                     <?php if (!empty($images)){?>
-                    <img id="myGallery" src="{pyro:url:base}uploads/pyrocart/full/<?php echo $image[0]->product_image?>" alt="" title="<?php echo $image[0]->name?>"  />
+                    <img id="myGallery" src="{{ url:base }}uploads/pyrocart/full/<?php echo $image[0]->product_image?>" alt="" title="<?php echo $image[0]->name?>"  />
                     <?php } ?>
                 </div>
             </div><!--End Col1-->
@@ -155,7 +155,7 @@ $(document).ready(function(){
             <div class="col2 leftStyle portfolio_image_right">
                 <?php foreach($images as $img):?>
                 <div class="raw">
-                    <img rel='{pyro:url:base}uploads/pyrocart/full/<?php echo $img->product_image?>' style="width:64px;height:64px;overflow:hidden;" src="{pyro:url:base}uploads/pyrocart/thumbs/<?php echo $img->product_image_thumb?>" alt = "" title="<?php echo $img->name?>"/></a>
+                    <img rel='{{ url:base }}uploads/pyrocart/full/<?php echo $img->product_image?>' style="width:64px;height:64px;overflow:hidden;" src="{pyro:url:base}uploads/pyrocart/thumbs/<?php echo $img->product_image_thumb?>" alt = "" title="<?php echo $img->name?>"/></a>
                 </div>
                 <?php endforeach;?>
             </div><!--End Col2-->
@@ -180,7 +180,7 @@ $(document).ready(function(){
                             <span>Qty:</span> <input name="quantity" size="2" value="1" type="text">
                             <input type="hidden" name="product_id" value="<?php echo $product->id?>"/>
                             <?php if($product->stock>0):?>
-                                <input  name="addtocart" type="image" src="{pyro:url:base}addons/default/modules/pyrocart/img/cart.jpg" />
+                                <input  name="addtocart" type="image" src="{{ url:base }}addons/shared_addons/modules/pyrocart/img/cart.jpg" />
                             <?php else: ?>
                                 <div class="sold_out" style="margin-left:5px;">&nbsp;</div>
                             <?php endif;?>
@@ -190,7 +190,7 @@ $(document).ready(function(){
                 <?php echo form_close(); ?>
             </div><!--End Col3-->
             <?php if (!empty($images)){?>
-            <div class="enlarge"><a class="colorbox_image" href="{pyro:url:base}uploads/pyrocart/full/<?php echo $image[0]->product_image?>">Click to enlarge</a></div>
+            <div class="enlarge"><a class="colorbox_image" href="{{ url:base }}uploads/pyrocart/full/<?php echo $image[0]->product_image?>">Click to enlarge</a></div>
             <?php } ?>
         </div>
         

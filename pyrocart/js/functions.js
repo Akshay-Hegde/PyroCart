@@ -2,12 +2,6 @@
 	$(function(){
 		// General -----------------------------------------------------
 
-		// Apply sexy style to input fields with uniform
-		$('select, textarea, input[type=text], input[type=file], input[type=submit]')
-			.livequery(function(){
-				$(this).not('.no-uniform').uniform().addClass('no-uniform');
-		});
-
 		// Folder ------------------------------------------------------
 
 		$('.cancel.close-cbox').livequery('click', function(){

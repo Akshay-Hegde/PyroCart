@@ -30,7 +30,7 @@ class Pyrocart extends Public_Controller
                 
             //$this->template->set_layout('store.html');
             $this->template->set_partial('sidebar', 'partials/sidebar.php',$this->data);
-            $this->template->append_metadata( css('pyrocart.css', 'pyrocart') );
+            //$this->template->append_metadata( css('pyrocart.css', 'pyrocart') );
 
 	}
 

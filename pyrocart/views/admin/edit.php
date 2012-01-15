@@ -1,4 +1,7 @@
-<h3><?php echo lang('products.add_title'); ?></h3>
+<section class="title">
+<h4><?php echo lang('products.edit_title'); ?></h4>
+</section>
+<section class="item">
 <script>
 $(function() {
 		$( "#datepicker" ).datepicker();
@@ -72,3 +75,4 @@ $(function() {
         <?php $this->load->view('admin/partials/buttons', array('buttons' => array('save', 'cancel') )); ?>
 </div>
 <?php echo form_close(); ?>
+</section>

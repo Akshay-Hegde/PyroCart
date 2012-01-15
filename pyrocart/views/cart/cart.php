@@ -68,8 +68,8 @@
                     <div class="checkout rightStyle">
                         <div class="btn_shop"><a href="{pyro:url:base}pyrocart/">Continue Shopping</a></div>
                         <div class="btn_checkout">
-                            <a href="{pyro:url:base}pyrocart/paypal/form/">
-                            <input type="button" name="checkout" style="width:112px; height:30px; border:0px; background:url('{pyro:url:base}addons/default/modules/pyrocart/img/checkout.jpg')" value="" >
+                            <a href="{{ url:base }}pyrocart/paypal/form/">
+                            <input type="button" name="checkout" style="width:112px; height:30px; border:0px; background:url('{{ url:base }}addons/default/modules/pyrocart/img/checkout.jpg')" value="" >
                             </a>
                         </div>
                     </div>
